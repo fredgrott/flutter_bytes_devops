@@ -9,14 +9,11 @@ This is part of my approach towards a full Flutter and Dart
 book series with the flutter bytes hub listing all the
 code repos and articles at:
 
-[Flutter Bytes Hub]()
+[Flutter Bytes Hub](https://github.com/fredgrott/flutter_bytes_hub)
 
 
 ## Article
 
-The article,    name of article is here:
-
-[]()
 
 ## Sequence
 
