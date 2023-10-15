@@ -1,0 +1,70 @@
+name: device_preview_demo
+description: "A new Flutter project."
+
+# Prevent accidental publishing to pub.dev.
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.2.0-42.1.beta <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  # more localizations
+  intl: ^0.18.1
+  # localization utilies
+  intl_utils: ^2.8.4
+  # device preview for app stores
+  device_preview: ^1.1.0
+  # device preview plugin
+  # for screenshots
+  screenshot_modes: ^1.0.1
+  path: ^1.8.3
+
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  # more opinionated lints than flutter lints
+  lint: ^2.1.2
+  # replaces DCM
+  dart_code_linter: ^1.1.1
+
+dependency_overrides:
+  device_preview:
+    git:
+      url: https://github.com/bradrushworth/flutter_device_preview.git
+      path: device_preview
+#    path: ../flutter_device_preview/device_preview
+  device_frame:
+    git:
+      url: https://github.com/bradrushworth/flutter_device_preview.git
+      path: device_frame
+#    path: ../flutter_device_preview/device_frame
+
+
+flutter:
+  uses-material-design: true
+
+  # Enable generation of localized Strings from arb files.
+  generate: true
+
+  assets:
+    # Add assets from the images directory to the application.
+    - assets/images/
+
+flutter_intl:
+  enabled: true 
+  class_name: S 
+  main_locale: en 
+  arb_dir: lib/localization 
+  output_dir: lib/generated 
+  use_deferred_loading: false 
+
+

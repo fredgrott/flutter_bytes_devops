@@ -1,0 +1,3 @@
+type this on command line to generate localizations
+
+flutter pub run intl_utils:generate
