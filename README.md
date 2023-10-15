@@ -12,7 +12,11 @@ code repos and articles at:
 [Flutter Bytes Hub](https://github.com/fredgrott/flutter_bytes_hub)
 
 
-## Article
+## Articles
+
+[Flutter DevOPS Approach To App Icons](https://fredgrott.medium.com/flutter-devops-approach-to-app-icons-bd21a7acf7e6?sk=0abad01f8e4c6cb9d3c54320582481e4)
+
+
 
 
 ## Sequence
