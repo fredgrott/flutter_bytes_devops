@@ -1,0 +1,1 @@
+App arch examples going through all state management solutions

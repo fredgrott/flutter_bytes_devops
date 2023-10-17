@@ -1,4 +1,0 @@
-type at command line
-
-flutter get
-dart pub run flutter_launcher_icons

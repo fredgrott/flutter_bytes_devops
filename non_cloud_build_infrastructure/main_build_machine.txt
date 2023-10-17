@@ -1,0 +1,36 @@
+Two ways to do this:
+
+1. Laptop and Nuc combo
+
+   a. Choose Apple Laptop with enough graphics cores to drive
+      3 remote screens and enough ram and SSD
+
+   b. NUCs for non Apple and non android devices will 
+      be either Intel Iris or Intel Arc graphics
+       with enough ram and SSD storage to handle the builds.
+
+2. Without NUCs, Apple studio
+
+   Qemu is the only emulator that can 
+   emulate graphics via software without
+   relying upon Host OS. That means
+   it will  be slower unless you get high 
+   enough CPU and GPU cores.
+
+   Note: The Androiod Emulator is a Qemu
+   variation for this reason of needing to 
+   emulate graphics through software without
+   relying upon the host OS as they host OS
+   hypervisor is handling memory.
+
+   Hence you need the highest CPU and GPU 
+   cores you can afford with Apple Studio
+   such as
+
+   Apple M2Max with !2-core CPU,
+   38-core GPU and 16-core
+   Neural Engine and 64 gig ram or higher
+
+   With 4TB SSD to account for 
+   Qemu running separate OSes
+
