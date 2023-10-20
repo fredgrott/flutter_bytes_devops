@@ -1,3 +1,7 @@
+// Copyright 2023 Fredrick Allan Grott. All rights reserved.
+// Use of this source code is governed by a BSD-style
+// license that can be found in the LICENSE file.
+
 // This is an example Flutter widget test.
 //
 // To perform an interaction with a widget in your test, use the WidgetTester
@@ -12,20 +16,29 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
-  group('MyWidget', () {
-    testWidgets('should display a string of text', (WidgetTester tester) async {
-      // Define a Widget
-      const myWidget = MaterialApp(
-        home: Scaffold(
-          body: Text('Hello'),
-        ),
+  group(
+    'MyWidget',
+    () {
+      testWidgets(
+        'should display a string of text',
+        (WidgetTester tester) async {
+          // Define a Widget
+          const myWidget = MaterialApp(
+            home: Scaffold(
+              body: Text('Hello'),
+            ),
+          );
+
+          // Build myWidget and trigger a frame.
+          await tester.pumpWidget(myWidget);
+
+          // Verify myWidget shows some text
+          expect(
+            find.byType(Text),
+            findsOneWidget,
+          );
+        },
       );
-
-      // Build myWidget and trigger a frame.
-      await tester.pumpWidget(myWidget);
-
-      // Verify myWidget shows some text
-      expect(find.byType(Text), findsOneWidget);
-    });
-  });
+    },
+  );
 }

@@ -1,6 +1,10 @@
+// Copyright 2023 Fredrick Allan Grott. All rights reserved.
+// Use of this source code is governed by a BSD-style
+// license that can be found in the LICENSE file.
+
 import 'package:flutter/material.dart';
 
-import 'settings_service.dart';
+import 'package:logging_demo/src/settings/settings_service.dart';
 
 /// A class that many Widgets can interact with to read user settings, update
 /// user settings, or listen to user settings changes.

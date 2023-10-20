@@ -434,7 +434,7 @@
     "Device Preview": "https://pub.dev/documentation/device_preview/latest/"
   },
 
-  "workbench.editor.showTabs": true,
+  "workbench.editor.showTabs": "multiple",
   "workbench.activityBar.visible": true,
 
   "terminal.integrated.lineHeight": 1.5,
