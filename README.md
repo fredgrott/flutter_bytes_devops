@@ -27,6 +27,8 @@ And the CI example is a separate repo:
 
 [Missing In The Flutter SDK, Correct App Launcer Icons](https://fredgrott.medium.com/missing-in-the-flutter-sdk-correct-app-launcher-icons-a030a4ee0978?sk=e15699d758fc331cda994b72074d86bc)
 
+[Flutter Expert Way To Set Up Static Code Analysis](https://fredgrott.medium.com/flutter-expert-way-to-set-up-static-code-analysis-0c77346bee4c?sk=f7888eb91ae3006d4bb900bb175bcfd3)
+
 
 
 ## License

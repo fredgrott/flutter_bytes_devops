@@ -40,14 +40,14 @@ dart_code_linter:
     number-of-methods: 10
     source-lines-of-code: 250
     technical-debt:
-      threshold: 16
-      todo-cost: 4
-      ignore-cost: 8
-      ignore-for-file-cost: 16
-      as-dynamic-cost: 16
-      deprecated-annotations-cost: 2
-      file-nullsafety-migration-cost: 2
-      unit-type: "hours"
+      threshold: 1
+      todo-cost: 161
+      ignore-cost: 320
+      ignore-for-file-cost: 396
+      as-dynamic-cost: 322
+      deprecated-annotations-cost: 37
+      file-nullsafety-migration-cost: 41
+      unit-type: "USD"
   metrics-exclude:
     - test/**
   # full rules list is at
@@ -55,67 +55,174 @@ dart_code_linter:
   rules:
     #dart
     - avoid-substring
-    - arguments-ordering
+      # used with sort_child_properties_last
+    - arguments-ordering:
+        child-last: true
+    - avoid-banned-file-names:
+        entries:
+          - .*example.dart
+    # these are used to help enforce arch decisions
     # - avoid-banned-imports
+    # - avoid-banned-types
     - avoid-cascade-after-if-null
     - avoid-collection-methods-with-unrelated-types
     - avoid-duplicate-exports
     - avoid-dynamic
     - avoid-global-state
     # - avoid-ignoring-return-values
-    # - avoid-late-keyword
+    - avoid-importing-entrypoint-exports:
+        only-in-src: true
+    # - avoid-late-keyword:
+    #     allow-initialized: true
+    - avoid-long-files:
+        max-length: 500
+    - avoid-long-functions:
+        max-length: 80
+        ignored-names:
+          - some
+          - name
+    - avoid-long-parameter-list:
+        ignore-optional: true
+        max-amount: 3
+        ignored-names:
+          - some
+          - name
+    - avoid-long-records:
+        max-amount: 6
     - avoid-missing-enum-constant-in-map
     - avoid-nested-conditional-expressions
+    - avoid-nested-records:
+        acceptable-level: 2
+    - avoid-nested-switch-expressions:
+        acceptable-level: 1
     - avoid-non-ascii-symbols
-    # - avoid-non-null-assertion
+    # - avoid-non-null-assertion:
+    #     skip-checked-fields: true
+    - avoid-nullable-interpolation:
+        ignored-invocations:
+          - log
+          - debugPrint
     # - avoid-passing-async-when-sync-expected
     # - avoid-redundant-async
+    - avoid-shadowing:
+        ignore-static: true
+        ignore-fields: true
+        ignore-parameters: true
+        ignored-names:
+          - some
+          - name
+    - avoid-similar-names:
+        show-similarity: true
+        similarity-threshold: 0.9
+        ignored-names:
+          - some
+          - name
     - avoid-throw-in-catch-block
     - avoid-top-level-members-in-tests
     - avoid-unnecessary-type-assertions
     - avoid-unnecessary-type-casts
-    - avoid-unrelated-type-assertions
-    - avoid-unused-parameters
+    - avoid-unrelated-type-assertions:
+        ignore-mixins: false
+    - avoid-unused-instances:
+        ignored-instances:
+          - Timer
+          - SomeOtherClass
+    - avoid-unused-parameters:
+        ignore-inline-functions: false
     # - ban-name
+    # - banned-usage
     - binary-expression-operand-order
     - double-literal-format
-    - format-comment
-    - member-ordering
+    - format-comment:
+        only-doc-comments: true
+        ignored-patterns:
+          - ^ cSpell.*    
+    # - match-class-name-pattern:
+    #     entries:
+    #      - path: '.*state.dart'
+    #        pattern: 'State$'
+    #        ignore-private: true  
+    - missing-test-assertion:
+        include-assertions:
+          - verify
+        include-methods:
+          - customTest
+    - move-records-to-typedefs:
+        min-fields: 5
+        min-occurrences: 3
     - newline-before-return
-    - no-boolean-literal-compare
+    - no-boolean-literal-compare:
+        allow-false: true
     # - no-empty-block
-    - no-equal-arguments
+    - no-equal-arguments:
+        ignored-parameters:
+          - height
+          - width
     - no-equal-then-else
-    - no-magic-number
+    # - no-magic-number:
+    #     allowed: [3.14, 100, 12]
+    #     allow-only-once: true
     - no-object-declaration
+    - parameters-ordering:
+        required: 'first'
+        default: 'last'
     - prefer-async-await
     - prefer-commenting-analyzer-ignores
-    - prefer-conditional-expressions
-    - prefer-correct-identifier-length
+    - prefer-conditional-expressions:
+        ignore-nested: true
+    - prefer-correct-error-name:
+        allowed-names:
+          - err
+    # - prefer-correct-identifier-length:
+    #     exceptions: [ 'a' ]
+    #     max-identifier-length: 30
+    #     min-identifier-length: 4
+    - prefer-correct-switch-length:
+        min-length: 5
+        max-length: 20
     - prefer-correct-test-file-name
-    - prefer-correct-type-name
+    - prefer-correct-type-name:
+        excluded: [ 'exampleExclude' ]
+        min-length: 3
+        max-length: 40
+    - prefer-declaring-const-constructor:
+        allow-one: true
     - prefer-enums-by-name
     - prefer-first
     - prefer-immediate-return
     - prefer-iterable-of
     - prefer-last
     - prefer-match-file-name
-    - prefer-moving-to-variable
+    - prefer-moving-to-variable:
+        allowed-duplicated-chains: 3
+    - prefer-named-boolean-parameters:
+        ignore-single: true
+        ignore-single-boolean: true
     - prefer-static-class
-    - prefer-trailing-comma
+    - prefer-trailing-comma:
+        break-on: 2
+    - unnecessary-trailing-comma:
+        max-width: 100
     - avoid-double-slash-imports
     - avoid-unnecessary-conditionals
-    - missing-test-assertion
     # flutter
     - prefer-define-hero-tag
     - always-remove-listener
     - avoid-border-all
-    - avoid-returning-widgets
+    - avoid-missing-image-alt:
+        allow-empty: true
+    - avoid-returning-widgets:
+        ignored-names:
+          - testFunction
+        ignored-annotations:
+          - allowedAnnotation
     - avoid-shrink-wrap-in-lists
     - avoid-expanded-as-spacer
     - avoid-wrapping-in-padding
     - check-for-equals-in-render-object-setters
     - consistent-update-render-object
+    - dispose-fields:
+        ignore-blocs: false
     - prefer-const-border-radius
     - prefer-correct-edge-insets-constructor
     # - prefer-extracting-callbacks
@@ -123,11 +230,9 @@ dart_code_linter:
     - prefer-using-list-view
     - use-setstate-synchronously
     # Intl, uncomment when needed
-    # - prefer-intl-name
-    # - prefer-provide-intl-description
-    # - provide-correct-intl-args
-    - format-comment:
-        only-doc-comments: true
+     # - prefer-intl-name
+     # - prefer-provide-intl-description
+     # - provide-correct-intl-args
     - member-ordering:
         order:
           - constructors
