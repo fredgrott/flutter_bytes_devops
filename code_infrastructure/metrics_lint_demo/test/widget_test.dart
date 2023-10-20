@@ -29,7 +29,7 @@ void main() {
       await tester.pumpWidget(myWidget);
 
       // Verify myWidget shows some text
-      expect(find.byType(Text), findsOneWidget);
-    });
-  });
+      expect(find.byType(Text), findsOneWidget,);
+    },);
+  },);
 }

@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
     // Whenever the user updates their settings, the MaterialApp is rebuilt.
     return ListenableBuilder(
       listenable: settingsController,
-      builder: (BuildContext context, Widget? child) {
+      builder: (BuildContext context, Widget? child,) {
         return MaterialApp(
           onGenerateRoute: (RouteSettings routeSettings) {
             return MaterialPageRoute&lt;void&gt;(
@@ -56,7 +56,7 @@ class MyApp extends StatelessWidget {
             GlobalWidgetsLocalizations.delegate,
             GlobalCupertinoLocalizations.delegate,
           ],
-          supportedLocales: const [Locale('en', '')],
+          supportedLocales: const [Locale('en', '',)],
           restorationScopeId: 'app',
         );
       },

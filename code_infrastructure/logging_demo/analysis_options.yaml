@@ -56,7 +56,7 @@ dart_code_linter:
     #dart
     - avoid-substring
     - arguments-ordering
-    - avoid-banned-imports
+    # - avoid-banned-imports
     - avoid-cascade-after-if-null
     - avoid-collection-methods-with-unrelated-types
     - avoid-duplicate-exports
@@ -76,7 +76,7 @@ dart_code_linter:
     - avoid-unnecessary-type-casts
     - avoid-unrelated-type-assertions
     - avoid-unused-parameters
-    - ban-name
+    # - ban-name
     - binary-expression-operand-order
     - double-literal-format
     - format-comment

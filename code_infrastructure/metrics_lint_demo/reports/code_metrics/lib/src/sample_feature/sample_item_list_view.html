@@ -11,7 +11,7 @@ import 'package:metrics_lint_demo/src/settings/settings_view.dart';
 class SampleItemListView extends StatelessWidget {
   const SampleItemListView({
     super.key,
-    this.items = const [SampleItem(1), SampleItem(2), SampleItem(3)],
+    this.items = const [SampleItem(1), SampleItem(2), SampleItem(3),],
   });
 
   static const routeName = '/';
@@ -26,7 +26,7 @@ class SampleItemListView extends StatelessWidget {
         actions: [
           IconButton(
             onPressed: () {
-              Navigator.restorablePushNamed(context, SettingsView.routeName);
+              Navigator.restorablePushNamed(context, SettingsView.routeName,);
             },
             icon: const Icon(Icons.settings),
           ),
@@ -40,7 +40,7 @@ class SampleItemListView extends StatelessWidget {
       // building all Widgets up front, the ListView.builder constructor lazily
       // builds Widgets as they’re scrolled into view.
       body: ListView.builder(
-        itemBuilder: (BuildContext context, int index) {
+        itemBuilder: (BuildContext context, int index,) {
           final item = items[index];
 
           return ListTile(
@@ -49,7 +49,7 @@ class SampleItemListView extends StatelessWidget {
             ),
             title: Text('SampleItem ${item.id}'),
             onTap: () {
-              Navigator.restorablePushNamed(context, SampleItemDetailsView.routeName);
+              Navigator.restorablePushNamed(context, SampleItemDetailsView.routeName,);
             },
           );
         },
