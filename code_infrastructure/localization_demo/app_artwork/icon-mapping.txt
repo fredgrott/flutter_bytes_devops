@@ -1,23 +1,22 @@
 android main image ic_logo_border.png
 adaptive background  ic_background.png
 adaptive foreground  ic_foreground.png
-adaptive round image ic_logo_round.png
 adaptive monochrome  ic_logo_monochrome.png
 
 
 ios
- image ic_logo_rectangle.png
+ image ic_squircle.png
 
 web
-  image ic_logo_border.png
-favicon  ic_logo_round.png
+  image ic_squircle.png
+
 
 macos
- image ic_logo_border.png
+ image ic_squircle.png
 
 windows
-  image ic_logo_border.png
+  image ic_squircle.png
 
 linux
 
-   image ic_logo_border.png
+   image ic_squircle.png

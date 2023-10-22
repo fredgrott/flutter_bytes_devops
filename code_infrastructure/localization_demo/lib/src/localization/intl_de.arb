@@ -1,0 +1,59 @@
+{
+  
+  "title": "App",
+  "@title": {
+    "description": "Title for the App",
+    "type": "text",
+    "placeholders": {}
+  },
+  "listTileTitle": "Musterartikel {value}",
+  "@listTileTitle": {
+    "description": "ListTile title",
+    "type": "text",
+    "placeholders": {
+      "value": {}
+    }
+  },
+  "sampleItemListViewTitle": "Beispielartikel",
+  "@sampleItemListViewTitle": {
+    "description": "Sample Item List View Title",
+    "type": "text",
+    "placeholders": {}
+  },
+  "sampleItemDetailsViewTitle": "Artikeldetails",
+  "@sampleItemDetailsViewTitle": {
+    "description": "Sample Item Detials view Title",
+    "type": "text",
+    "placeholders": {}
+  },
+  "settingsViewTitle": "Einstellungen",
+  "@settingsViewTitle": {
+    "description": "Settings View Title",
+    "type": "text",
+    "placeholders": {}
+  },
+  "settingsSystemTheme": "System Thema",
+  "@settingsSystemTheme": {
+    "description": "Settings System Theme",
+    "type": "text",
+    "placeholders": {}
+  },
+  "settingsLightTheme": "Licht Thema",
+  "@settingsLightTheme": {
+    "description": "Settings Light Theme",
+    "type": "text",
+    "placeholders": {}
+  },
+  "settingsDarkTheme": "Dunkles Thema",
+  "@settingsDarkTheme": {
+    "description": "Settings Dark Theme",
+    "type": "text",
+    "placeholders": {}
+  },
+  "sampleItemDetailsViewDetail": "Weitere Informationen Hier",
+  "@sampleItemDetailsViewDetail": {
+    "description": "Sample Item Detials View Detail",
+    "type": "text",
+    "placeholders": {}
+  }
+}

@@ -16,12 +16,17 @@ dependencies:
     sdk: flutter
   # localizations
   intl: ^0.18.1
+  intl_utils: ^2.8.5
+  # logging and appenders
+  logging: ^1.2.0
+  logging_appenders: ^1.2.0+1
+
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_launcher_icons: "^0.13.1"
-
+    
 
   # more opinionated lints than flutter lints
   lint: ^2.1.2
@@ -37,3 +42,10 @@ flutter:
   assets:
     # Add assets from the images directory to the application.
     - assets/images/
+# intl stuff via intl utils
+flutter_intl:
+  enabled: true
+  class_name: CustomAppLocalizations
+  main_locale: en
+  arb_dir: lib/src/localization
+  output_dir: lib/src/localization
