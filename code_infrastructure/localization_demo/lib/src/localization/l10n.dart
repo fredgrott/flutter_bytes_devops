@@ -62,7 +62,7 @@ class CustomAppLocalizations {
   }
 
   /// `SampleItem {value}`
-  String listTileTitle(Object value) {
+  String listTileTitle(int value) {
     return Intl.message(
       'SampleItem $value',
       name: 'listTileTitle',

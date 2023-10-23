@@ -43,7 +43,7 @@
 
     // LanguageTool Linter
     // https://marketplace.visualstudio.com/items?itemName=davidlday.languagetool-linter
-    "davidlday.languagetool-linter"
+    "davidlday.languagetool-linter",
 
     // Material Product Icons Theme
     // https://marketplace.visualstudio.com/items?itemName=PKief.material-product-icons
@@ -110,7 +110,7 @@
 
     // Multiple Clipboards
     // https://marketplace.visualstudio.com/items?itemName=slevesque.vscode-multiclip
-    "slevesque.vscode-multiclip"
+    "slevesque.vscode-multiclip",
 
     
     
@@ -182,17 +182,18 @@
 
    // Build Runner
    // https://marketplace.visualstudio.com/items?itemName=Kaiqun.build-runner
-   "Kaiqun.build-runner"
+   "Kaiqun.build-runner",
 
 
  
  
   // Flutter and Dart Snippets
   // https://marketplace.visualstudio.com/items?itemName=alexisvt.flutter-snippets
-  "alexisvt.flutter-snippets"
+  "alexisvt.flutter-snippets",
 
-
-
+  // ARB editor
+  // https://marketplace.visualstudio.com/items?itemName=Google.arb-editor
+  "Google.arb-editor",
 
   ]
 }

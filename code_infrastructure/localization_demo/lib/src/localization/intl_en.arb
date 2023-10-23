@@ -1,4 +1,5 @@
 {
+  "@@locale": "en",
   "title": "App",
   "@title": {
     "description": "Title for the App",
@@ -10,7 +11,9 @@
     "description": "ListTile title",
     "type": "text",
     "placeholders": {
-      "value": {}
+      "value": {
+        "type": "int"
+      }
     }
   },
   "sampleItemListViewTitle": "Sample Items",

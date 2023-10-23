@@ -60,10 +60,5 @@ Note, that if you need or are supplying
 the shared scaffold as part of the wrapping
 MaterialApp around the screen or widget
 under test you will still need to wrap
-the screen or widget in a material widget 
-and builder combination. Also, note
-that this is not in the damn Flutter Docs
-nor is it in the lazy done sample apps
-from like GSkinner or Very Good Ventures or
-even from the Flutter Google Developer
-Experts.
+the screen or widget in a builder but
+not the Material Widget
