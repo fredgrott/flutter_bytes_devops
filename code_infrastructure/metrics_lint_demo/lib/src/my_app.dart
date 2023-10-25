@@ -57,6 +57,7 @@ class MyApp extends StatelessWidget {
             GlobalCupertinoLocalizations.delegate,
           ],
           supportedLocales: const [Locale('en', '',)],
+          debugShowCheckedModeBanner: false, 
           restorationScopeId: 'app',
         );
       },

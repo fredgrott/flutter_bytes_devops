@@ -31,14 +31,12 @@ class MyApp extends StatelessWidget {
       builder: (BuildContext context, Widget? child,) {
         return MaterialApp(
           onGenerateRoute: (RouteSettings routeSettings) {
-            
             return MaterialPageRoute<void>(
               builder: (BuildContext context) {
                 switch (routeSettings.name) {
                   case SettingsView.routeName: return SettingsView(controller: settingsController); 
                   case SampleItemDetailsView.routeName: return const SampleItemDetailsView(); 
-                  case SampleItemListView.routeName:  default: return const SampleItemListView();
-                  }
+                  case SampleItemListView.routeName:  default: return const SampleItemListView();}
                 }, 
               settings: routeSettings,
             );
@@ -54,8 +52,9 @@ class MyApp extends StatelessWidget {
             GlobalCupertinoLocalizations.delegate,
           ], 
           supportedLocales: CustomAppLocalizations.delegate.supportedLocales, 
+          debugShowCheckedModeBanner: false, 
           restorationScopeId: 'app',
-          );
+        );
       },
     );
   }
