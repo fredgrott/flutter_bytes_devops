@@ -1,0 +1,7 @@
+1. widget unit testing with
+   proper MaterialApp wrapping.
+2. show off internationalizing mocking
+   with the proper materialapp wrapping.
+3. goldens testing.
+4. storyboarding with the BDD testing
+    re-use example.

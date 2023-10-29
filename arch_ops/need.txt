@@ -1,1 +1,7 @@
-App arch examples going through all state management solutions
+1. Flutter Data Class With Mocking
+   methods in the class to ease mocking
+   boilerplate.
+2. Widget view biz separation.
+3. Useful inherited widget constructs 
+  such as service inits.
+4. event state change observing solutions.

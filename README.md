@@ -35,6 +35,9 @@ And the CI example is a separate repo:
 
 [Expert Best Flutter App Build Machines Is It Apple Or Not](https://fredgrott.medium.com/expert-best-flutter-app-build-machines-is-it-apple-or-not-0b88704773ac?sk=e5bb87e48944cee6884e723c20b574b3)
 
+[Avoiding Apple Tax With AMD, My Flutter Studio](https://fredgrott.medium.com/avoiding-apple-tax-with-amd-my-flutter-studio-b6b67e19781f?sk=324c676471a8dddff87df8ad5474e59c)
+
+
 
 
 
