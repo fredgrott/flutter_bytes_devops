@@ -1,0 +1,64 @@
+If you use intl utils you save some steps and plus than 
+you do not have to change from ARB format to ICU message format as they are vastly different :
+1. Prepare the locale arb files in arb format with 
+    the following file syntax naming:
+
+        intl_<locale_iso_code>.arb
+2. instead of gen-l10n use the intl utils yaml
+   set up in pubspec
+3. Then in terminal type
+
+
+
+
+flutter pub run intl_utils:generate
+
+
+
+
+
+4. That will produce the AppLocalizations class file automatically
+   in the lib/src/localization called  
+
+5. You can optionally use localizely dot com to get the arb files
+   translated in step 1.
+
+
+6. Okay, to mock it you need to do this
+   in your tests:
+
+Future<CustomAppLocalizations> getLocalizationsUnderTests(
+    WidgetTester t,
+  ) async {
+    late CustomAppLocalizations result;
+    await t.pumpWidget(
+      MaterialApp(
+        localizationsDelegates: const <LocalizationsDelegate>[
+          GlobalCupertinoLocalizations.delegate,
+          GlobalMaterialLocalizations.delegate,
+          GlobalWidgetsLocalizations.delegate,
+          CustomAppLocalizations.delegate,
+        ],
+        supportedLocales: CustomAppLocalizations.supportedLocales,
+        locale: const Locale('en'),
+        home: Material(
+          child: Builder(
+            builder: (BuildContext context) {
+              result = CustomAppLocalizations.of(context);
+              debugPrint('[DEBUG]: locale: $result');
+
+              // The builder function must return a widget.
+              return const Placeholder();
+            },
+          ),
+        ),
+      ),
+    );
+    await t.pumpAndSettle();
+
+Note, that if you need or are supplying 
+the shared scaffold as part of the wrapping
+MaterialApp around the screen or widget
+under test you will still need to wrap
+the screen or widget in a builder but
+not the Material Widget
